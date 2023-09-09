@@ -22,5 +22,7 @@ class StudentSeeder extends Seeder
             ['id' => 4, 'name' => 'ojan', 'score' => 90]
         ];
         DB::table('students')->insert($data);
+        // run "php artisan DB:seed --class=StudentSeeder"
+
     }
 }
