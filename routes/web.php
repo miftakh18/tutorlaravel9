@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/greeting', function () {
+    return 'Hello World';
+});
+
+Route::get('/greeting/{name}', function ($nama) {
+    return 'Hello ' . $nama;
+});
+
+
+// berfungsi untuk menamai routenya
+// untuk mempermudah pemanggilan di setiap komponen
+Route::get('/greetingw/{name}', function ($nama) {
+    return 'Hello ' . $nama;
+})->name('greet_with_name');
