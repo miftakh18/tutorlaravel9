@@ -22,7 +22,8 @@ Route::get('/greeting', function () {
 });
 
 Route::get('/greeting/{name}', function ($nama) {
-    return 'Hello ' . $nama;
+    return
+        view('example', ['nama' => $nama]);
 });
 
 
