@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <h1>Hello World {{ $nama }}</h1>
+        <h1>Your address Is {{ $address }}</h1>
 
     </body>
 

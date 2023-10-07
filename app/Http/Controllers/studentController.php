@@ -11,7 +11,7 @@ class studentController extends Controller
 
     public function show($id)
     {
-        $name = Student::find($id)->name;
-        return view('example', ['nama' => $name]);
+        $address = Student::find($id)->contact->address;
+        return view('example', ['address' => $address]);
     }
 }
