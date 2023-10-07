@@ -9,11 +9,7 @@
 
     <body>
         <h1>Hello World {{ $nama }}</h1>
-        @if ($nama == 'rahul')
-            <h1> Ganteng</h1>
-        @else
-            <h1>B aja</h1>
-        @endif
+
     </body>
 
 </html>

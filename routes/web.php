@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\studentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,18 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/greeting', function () {
-    return 'Hello World';
-});
-
-Route::get('/greeting/{name}', function ($nama) {
-    return
-        view('example', ['nama' => $nama]);
-});
-
-
-// berfungsi untuk menamai routenya
-// untuk mempermudah pemanggilan di setiap komponen
-Route::get('/greetingw/{name}', function ($nama) {
-    return 'Hello ' . $nama;
-})->name('greet_with_name');
+Route::get('/greeting/{id}', [studentController::class, 'show']);
