@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
+use App\Models\Teacher;
 
 class studentController extends Controller
 {
@@ -11,7 +12,7 @@ class studentController extends Controller
 
     public function show($id)
     {
-        $name = Student::find($id)->teacher->name;
-        return view('example', ['name' => $name]);
+        $students = Teacher::find($id)->students;
+        return view('example', ['students' => $students]);
     }
 }

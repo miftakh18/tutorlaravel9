@@ -8,8 +8,12 @@
     </head>
 
     <body>
-        <h1>Your address Is {{ $name }}</h1>
-
+        <p>Your students</p>
+        <ul>
+            @foreach ($students as $no => $std)
+                <li>{{ $std->name }} </li>
+            @endforeach
+        </ul>
     </body>
 
 </html>
