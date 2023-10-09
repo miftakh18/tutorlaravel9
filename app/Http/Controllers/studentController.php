@@ -13,8 +13,8 @@ class studentController extends Controller
 
     public function show($id)
     {
-        $activity = Activity::find($id);
-        $students = $activity->students;
-        return view('example', ['activity' => $activity, 'students' => $students]);
+        $student = Student::find($id);
+        $activities = $student->activities;
+        return view('example', ['activities' => $activities, 'student' => $student]);
     }
 }

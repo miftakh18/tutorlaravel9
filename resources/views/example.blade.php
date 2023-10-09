@@ -8,10 +8,11 @@
     </head>
 
     <body>
-        <p> {{$activity->name}} </p>
+        <p> {{ $student->name }} </p>
         <ul>
-            @foreach ($students as $no => $std)
-                <li>{{ $std->name }} </li>
+            {{-- @dd($activities) --}}
+            @foreach ($activities as $no => $act)
+                <li>{{ $act->name }} </li>
             @endforeach
         </ul>
     </body>
