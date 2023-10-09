@@ -17,4 +17,8 @@ class Student extends Model
     {
         return $this->belongsTo(Teacher::class);
     }
+    public function activity()
+    {
+        return $this->belongsToMany(Activity::class);
+    }
 }

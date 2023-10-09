@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <p>Your students</p>
+        <p> {{$activity->name}} </p>
         <ul>
             @foreach ($students as $no => $std)
                 <li>{{ $std->name }} </li>
