@@ -24,8 +24,12 @@
                 </tr>
             @endforeach
         </table>
+        current page : {{ $students->currentPage() }}
+        Total page : {{ $students->total() }}
+        Data Per page : {{ $students->perPage() }}
 
 
+        {{ $students->links('pagination::bootstrap-4') }}
     </body>
 
 </html>

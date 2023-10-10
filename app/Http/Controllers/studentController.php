@@ -15,7 +15,8 @@ class studentController extends Controller
     public function index()
     {
 
-        $studens  = Student::all();
+        // $studens  = Student::all();
+        $studens  = Student::paginate(2);
         return view('index', ['students' => $studens]);
     }
 
