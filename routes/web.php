@@ -14,8 +14,6 @@ use App\Http\Controllers\studentController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [studentController::class, 'index']);
 
 Route::get('/greeting/{id}', [studentController::class, 'show']);

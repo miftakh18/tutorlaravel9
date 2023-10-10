@@ -11,6 +11,14 @@ class studentController extends Controller
 {
     //
 
+
+    public function index()
+    {
+
+        $studens  = Student::all();
+        return view('index', ['students' => $studens]);
+    }
+
     public function show($id)
     {
         $student = Student::find($id);
