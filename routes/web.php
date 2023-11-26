@@ -14,7 +14,7 @@ use App\Http\Controllers\studentController;
 |
 */
 
-Route::get('/index', [studentController::class, 'index'])->name('index');
+Route::get('/', [studentController::class, 'index'])->name('index');
 // Route::get('/greeting/{id}', [studentController::class, 'show']);
 
 Route::get('/filter', [studentController::class, 'filter']);
@@ -25,3 +25,10 @@ Route::get('/show/{id}', [studentController::class, 'show'])->name('show');
 // sesi create
 Route::get('/create', [studentController::class, 'create'])->name('create');
 Route::post('/create', [studentController::class, 'store'])->name('store');
+
+// sesi edit
+Route::get('/edit/{student}', [studentController::class, 'edit'])->name('edit');
+// Route::get('/edit/{student}', [studentController::class, 'edit'])->name('edit');
+// patch merubah ke beberapa data yang di pilih
+//  put merubah ke seluruh data 
+Route::patch('/update/{student}', [studentController::class, 'update'])->name('update');
