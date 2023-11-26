@@ -15,6 +15,8 @@ use App\Http\Controllers\studentController;
 */
 
 Route::get('/', [studentController::class, 'index']);
-Route::get('/greeting/{id}', [studentController::class, 'show']);
+// Route::get('/greeting/{id}', [studentController::class, 'show']);
 
 Route::get('/filter', [studentController::class, 'filter']);
+// sesi show all data detail part 1
+Route::get('/show/{id}', [studentController::class, 'show']);
