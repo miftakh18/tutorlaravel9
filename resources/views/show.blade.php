@@ -21,15 +21,16 @@
         </tr>
         <tr>
             <th>Score </th>
-            <td> {{ $student->name }} </td>
+            <td> {{ $student->score }} </td>
         </tr>
 
         <tr>
             <th colspan="2">Aktivitas</th>
         </tr>
 
-        @foreach ($student->activities as $activity)
+        @foreach ($student->activities as $no => $activity)
             <tr>
+                <td> {{ $no + 1 }}</td>
                 <td> {{ $activity->name }} </td>
             </tr>
         @endforeach

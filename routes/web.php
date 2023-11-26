@@ -19,4 +19,5 @@ Route::get('/', [studentController::class, 'index']);
 
 Route::get('/filter', [studentController::class, 'filter']);
 // sesi show all data detail part 1
-Route::get('/show/{id}', [studentController::class, 'show']);
+Route::get('/show/{id}', [studentController::class, 'show'])->name('show');
+// inisial dengan name show di show data detail part 2
