@@ -14,10 +14,14 @@ use App\Http\Controllers\studentController;
 |
 */
 
-Route::get('/', [studentController::class, 'index']);
+Route::get('/index', [studentController::class, 'index'])->name('index');
 // Route::get('/greeting/{id}', [studentController::class, 'show']);
 
 Route::get('/filter', [studentController::class, 'filter']);
 // sesi show all data detail part 1
 Route::get('/show/{id}', [studentController::class, 'show'])->name('show');
 // inisial dengan name show di show data detail part 2
+
+// sesi create
+Route::get('/create', [studentController::class, 'create'])->name('create');
+Route::post('/create', [studentController::class, 'store'])->name('store');

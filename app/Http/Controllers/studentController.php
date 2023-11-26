@@ -6,7 +6,9 @@ use App\Models\Activity;
 use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\Teacher;
+use Illuminate\Support\Facades\Redirect;
 use Spatie\FlareClient\View;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class studentController extends Controller
 {
@@ -36,5 +38,23 @@ class studentController extends Controller
         // sesi show data detail part 1
         $student = Student::find($id);
         return view('show', ['student' => $student]);
+    }
+
+    public function create()
+    {
+        return view('create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate(['name' => 'Required', 'score' => 'required']);
+        $data = [
+            'name' => $request->name,
+            'score' => $request->score,
+            //    karena masih dalam relationship teacher id harus di isi sementara di default
+            'teacher_id' => 1
+        ];
+        Student::create($data);
+        return Redirect::route('index');
     }
 }
