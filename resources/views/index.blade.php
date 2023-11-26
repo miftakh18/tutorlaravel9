@@ -27,6 +27,11 @@
                         @csrf
                         <button type="submit">edit</button>
                     </form>
+                    <form action="{{ route('delete', $student) }}" method="post">
+                        @csrf
+                        @method('delete')
+                        <button type="submit">delete</button>
+                    </form>
                 </td>
 
             </tr>

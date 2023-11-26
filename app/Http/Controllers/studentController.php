@@ -74,4 +74,11 @@ class studentController extends Controller
         $student->update($data);
         return redirect::route('index');
     }
+
+
+    public function delete(Student $student)
+    {
+        $student->delete();
+        return Redirect::route('index');
+    }
 }

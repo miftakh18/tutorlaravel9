@@ -32,3 +32,6 @@ Route::get('/edit/{student}', [studentController::class, 'edit'])->name('edit');
 // patch merubah ke beberapa data yang di pilih
 //  put merubah ke seluruh data 
 Route::patch('/update/{student}', [studentController::class, 'update'])->name('update');
+
+// sesi delete
+Route::delete('/delete/{student}', [studentController::class, 'delete'])->name('delete');
